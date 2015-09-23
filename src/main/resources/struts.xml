@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <package name="struts2" extends="struts-default">
+        <action name="productAction" class="productAction">
+            <result name="list">/list.jsp</result>
+            <result name="update">/update.jsp</result>
+            <result name="tosave">/save.jsp</result>
+            <result name="query" type="redirectAction">productAction!list.action</result>
+        </action>
+    </package>
+</struts>
